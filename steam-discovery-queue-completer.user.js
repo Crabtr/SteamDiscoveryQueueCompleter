@@ -1,12 +1,17 @@
 // ==UserScript==
 // @name         Steam Discovery Queue Completer
-// @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      1.1.1
 // @description  Automatically completes the Steam discovery queue
+// @license      GPLv3
 // @author       Evan Crabtree <github.com/crabtr>
+// @namespace    https://github.com/Crabtr/SteamDiscoveryQueueCompleter
 // @match        *://*store.steampowered.com/*
 // @grant        none
+// @updateURL   https://raw.githubusercontent.com/Crabtr/SteamDiscoveryQueueCompleter/master/steam-discovery-queue-completer.user.js
+// @downloadURL https://raw.githubusercontent.com/Crabtr/SteamDiscoveryQueueCompleter/master/steam-discovery-queue-completer.user.js
 // ==/UserScript==
+
+
 
 document.onload = (function() {
     'use strict';
