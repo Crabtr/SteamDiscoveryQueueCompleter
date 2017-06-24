@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Steam Discovery Queue Completer
-// @version      1.2.1
+// @version      1.2.2
 // @description  Automatically completes the Steam discovery queue
 // @license      GPLv3
 // @author       Evan Crabtree <github.com/crabtr>
@@ -11,7 +11,7 @@
 // @downloadURL https://raw.githubusercontent.com/Crabtr/SteamDiscoveryQueueCompleter/master/steam-discovery-queue-completer.user.js
 // ==/UserScript==
 
-document.onload = (function() {
+document.onload = function() {
     'use strict';
 
     // Normal game page in "discovery queue mode"
@@ -71,10 +71,12 @@ document.onload = (function() {
     let modals = document.getElementsByClassName("newmodal");
 
     if (modals.length > 0) {
-        let closeButtons = modals[2].getElementsByClassName("newmodal_close");
+        for (let i = 0; i < modals.length; i++) {
+            let closeButtons = modals[i].getElementsByClassName("newmodal_close");
 
-        if (closeButtons.length > 0) {
-            closeButtons[0].click();
+            if (closeButtons.length > 0) {
+                closeButtons[0].click();
+            }
         }
     }
 
@@ -96,4 +98,4 @@ document.onload = (function() {
             }
         }
     }
-})();
+}();
