@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Steam Discovery Queue Completer
-// @version      1.2.0
+// @version      1.2.1
 // @description  Automatically completes the Steam discovery queue
 // @license      GPLv3
 // @author       Evan Crabtree <github.com/crabtr>
@@ -67,7 +67,18 @@ document.onload = (function() {
     }
 
     // Start a new queue after completion
-    // Derives the number of cards unlocked from the queue completion page
+    // Handle alert modals for new cards/stickers
+    let modals = document.getElementsByClassName("newmodal");
+
+    if (modals.length > 0) {
+        let closeButtons = modals[2].getElementsByClassName("newmodal_close");
+
+        if (closeButtons.length > 0) {
+            closeButtons[0].click();
+        }
+    }
+
+    // Derive the number of cards unlocked from the queue completion page
     let header = document.getElementsByClassName("discovery_queue_winter_sale_cards_header");
 
     if (header.length > 0) {
