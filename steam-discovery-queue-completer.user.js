@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Steam Discovery Queue Completer
-// @version      1.2.2
+// @version      1.2.3
 // @description  Automatically completes the Steam discovery queue
 // @license      GPLv3
 // @author       Evan Crabtree <github.com/crabtr>
 // @namespace    https://github.com/Crabtr/SteamDiscoveryQueueCompleter
-// @match        *://*store.steampowered.com/*
+// @match        *://store.steampowered.com/*
 // @grant        none
 // @updateURL   https://raw.githubusercontent.com/Crabtr/SteamDiscoveryQueueCompleter/master/steam-discovery-queue-completer.user.js
 // @downloadURL https://raw.githubusercontent.com/Crabtr/SteamDiscoveryQueueCompleter/master/steam-discovery-queue-completer.user.js
